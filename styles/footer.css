@@ -1,0 +1,66 @@
+footer {
+    background-color: #0c0c0c;
+}
+footer .flexcon {
+    display: flex;
+    padding: 30px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+footer strong {
+    opacity: 1;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+footer .address div {
+    display: flex;
+    gap: 20px;
+}
+footer .address i {
+    font-style: normal;
+    font-size: 14px;
+    position: relative;
+    bottom: -8px;
+}
+footer p {
+    display: "";
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: capitalize;
+    opacity: .6;
+    line-height: 30px;
+}
+footer .aboutsite {
+    width: 50%;
+    flex: 1 1 50%;
+}
+footer .aboutsite p {
+    opacity: .5;
+}
+footer .copy {
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 1px solid #222222;
+}
+footer .copy p {
+    opacity: .7;
+}
+footer .num .fa-whatsapp {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 680px) {
+    footer .addressbar {
+        width: 100%;
+        box-sizing: border-box;
+        flex: 1 1 100%;
+    }
+    footer .aboutsite {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    footer .address {
+        line-height: 20px;
+    }
+}

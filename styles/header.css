@@ -1,0 +1,68 @@
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #203A43	;
+    z-index: 1;
+    user-select: none;
+    -moz-user-select: none;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 0;
+}
+nav li {
+    list-style: none;
+    padding: 0;margin: 0;
+}
+nav li a {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: capitalize;
+    transition: all .3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffffe7;
+    opacity: .5;
+}
+nav li a:hover {
+    opacity: .8;
+    transform: scale(1.05) translateY(-3px);
+    border-bottom: 1px solid #00FFC6;
+}
+nav .active {
+    border-bottom: 1px solid #00FFC6;
+    opacity: .9;
+}
+.address {
+    padding: 15px;
+    opacity: .8;
+}
+.address div {
+    display: flex;
+    gap: 20px;
+}
+.address i {
+    font-style: normal;
+    font-size: 14px;
+    position: relative;
+    bottom: -5px;
+}
+.address p {
+    display: "";
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 680px) {
+    nav {
+        top: 8vh;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}

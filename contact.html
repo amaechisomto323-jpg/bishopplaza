@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Holy bishop communication plaza</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="heading">
+                <p class="textgradient90deg">holy bishop communication plaza</p>
+            </div>
+        </header>
+        <div class="crumb">
+            <div>
+                <p class="big">contact holy bishop plaza</p>
+                <p class="small">
+                    lay your complaint or thoughts, ask questions and get instant reply from us 24/7 customer services
+                </p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="product.html">products</a></li>
+                <li><a href="contact.html" class="active">contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="contact">
+            <div class="formbox">
+                <h1>what do you have for us</h1>
+                <form action="">
+                    <input type="text" name="fullName" placeholder="full name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <input type="number" name="phoneNumber" placeholder="phone number" required>
+                    <textarea name="description" id="" placeholder="drop your commment"></textarea>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="flexcon">
+                <div class="addressbar">
+                    <strong>address</strong>
+                    <div class="address">
+                        <div class="text">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>
+                                shop 23 T.N uzoka plaza<br>
+                                116 zik's avenue awka, anambra state.
+                            </p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+234 9033443381</p>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <p>+234 9033443381</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutsite">
+                    <strong>about this site</strong>
+                    <p>
+                        This site only allow you to view all products owned by holy bishop communication plaza and does not allow you to make online payment on the site with debit/credit card. If you are willing to buy product from us, just find the product you want and click chat on WhatsApp for futher assistance.
+                    </p>
+                </div>
+            </div>
+            <div class="copy">
+                <p>holy bishop communication plaza &copy; 2025 - 2026. all rights reserved</p>
+            </div>
+        </footer>
+        <script>
+            const hero = document.querySelector ('.crumb'); // target your element
+
+            const images = [
+            "url('gadgetimage/iphone-13-6655518_1280.jpg')",
+            "url('gadgetimage/camera-6917213_1280.jpg')",
+            "url('gadgetimage/banner2.jpg')"
+            ];
+
+            let index = 0;
+
+            function changeBackground() {
+            hero.style.backgroundImage = images[index];
+            index = (index + 1) % images.length;
+            }
+
+            // run immediately
+            changeBackground();
+
+            // change every 5 seconds
+            setInterval(changeBackground, 5000);
+        </script>
+    </body>
+</html>

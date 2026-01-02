@@ -1,0 +1,670 @@
+/*****************************
+Background	        #0F2027	    Page background
+Primary	            #203A43	    Cards / sections
+Accent	            #2C5364	    Buttons
+Neon Highlight	    #00FFC6	    Glow / hover effects
+Text	            #EAEAEA	    Text color
+****************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    user-select: none;
+    -moz-user-select: none;
+}
+body {
+    background-color: #0F2027;
+    color: #EAEAEA;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fixbtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: auto;height: auto;
+    z-index: 2;
+}
+.fixicon {
+    background-color: #25D366;
+    padding: 10px 12px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.fixicon:hover {
+    animation: transform 2s ease-in-out infinite;
+}
+@keyframes transform {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.fixmess {
+    background-color: #ffffffcd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #0c0c0cd5;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;right: 5vw;bottom: 10px;
+    width: auto;
+    white-space: nowrap;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    transform: translateX(10px) translateY(-5px);
+    visibility: hidden;
+}
+.fixbtn:hover .fixmess {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+
+.textgradient0deg {
+    background: linear-gradient(0deg, #00FFC6, #2C5364);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.textgradient90deg {
+    background: linear-gradient(0deg, #00FFC6, #2C5364);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header {
+    opacity: .9;
+    background-color:#000000;
+    margin: 0;padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.heading {
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 0;
+}
+.heading p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-break: nowrap;
+    text-transform: uppercase;
+    line-height: 35px;
+    white-space: nowrap;
+    font-family:  'Fredoka', sans-serif;
+    box-sizing: border-box;
+    padding: 0;margin: 0;
+}
+.crumb {
+    height: 80vh;
+    background: url('') center/ cover;
+    background-blend-mode: darken;
+    background-color: #0c0c0c90;
+    transition: background-image 1s ease-in-out;
+    align-items: center;
+    display: grid;
+    text-align: center;
+}
+.crumb div {
+    align-items: center;
+    justify-items: center;
+}
+.crumb .big {
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-shadow: .5px 0 15px #000000;
+    font-weight: bolder;
+    font-family:  'Fredoka', sans-serif;
+}
+.crumb .small {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.home,.product,.contact {
+    margin: 30px 0;
+}
+
+.home .bannercon {
+    justify-items: center;
+}
+.home .banner {
+    background: url(../gadgetimage/loudheadset.jpg) center / cover;
+    width: 80%;
+    height: 50vh;
+    background-blend-mode: darken;
+    background-color: #0c0c0c63;
+    padding: 30px;
+    display: grid;
+    align-items: center;
+    border-radius: 40px;
+}
+.home .banner p {
+    width: 60%;
+    font-size: 1.5rem;
+    opacity: .7;
+}
+.home .banner i {
+    opacity: .6;
+    cursor: pointer;
+    padding: 5px;
+    transition: all .5s;
+    width: fit-content;
+}
+.home .banner i:hover {
+    opacity: .8;
+    transform: translateX(5px);
+}
+
+.home .discovercontainer {
+    padding: 10vh 0 0 0;
+}
+.home .discovercontainer .heading {
+    text-transform: capitalize;
+    margin-left: 5vw;
+}
+.home .cardbox {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 30px 30px 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.home .product-card {
+    background: #203A43;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #ffffff00;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 15%;
+    flex-wrap: wrap;
+}
+.home .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.home .product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: all .5s ease;
+}
+.home .product-card:hover .product-img {
+    filter: brightness(100%);
+}
+.home .product-info {
+    padding: 10px;
+    text-align: center;
+}
+.home .product-info h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    opacity: .85;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+.home .product-info p {
+    color: #9c9c9c;
+    margin-bottom: 7px;
+    font-size: 0.8rem;
+    letter-spacing: .9px;
+    text-transform: capitalize;
+}
+.home .price {
+    font-weight: 600;
+    color: #00FFC6;
+    font-size: .9rem;
+    margin-bottom: 7px;
+    opacity: .8;
+}
+.home button {
+    background: #25D366;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    user-select: none;
+    -moz-user-select: none;
+}
+.home button:hover {
+    background: #1ebe5b;
+    transform: scale(1.05);
+}
+
+.reasoncon {
+    justify-items: center;
+    padding: 40px 0 70px 0;
+}
+.reasoncon .heading {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+.reasoncon .reasonbox {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.reasoncon .reasonbox div {
+    background-color: #fff;
+    color: #323232;
+    display: flex;
+    width: 25%;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 40px;
+}
+.reasoncon .reasonbox div img {
+    width: 30%;
+}
+.reasoncon .reasonbox div p {
+    font-size: 13px;
+    letter-spacing: .8px;
+}
+.home .vibebox {
+    padding: 40px 0;
+}
+.home .vibe {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+.home .vibes {
+    width: 35vw;
+    height: 60vh;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    padding: 20px;
+    flex: 1 1 35vw;
+}
+.home .vibes p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    opacity: .9;
+    line-height: 40px;
+}
+.home .vibes h1 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.product .bannerbody {
+    justify-items: center;
+}
+.product .banner {
+    background: url(../gadgetimage/flashsalebanner.jpg) center center / cover;
+    width: 90vw;
+    height: 40vh;
+    background-blend-mode: darken;
+    background-color: #0c0c0c53;
+    border-radius: 50px;
+}
+.product .minitab {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product .minitab .tabs {
+    display: flex;
+    gap: 10px;
+}
+.product .minitab .head {
+    font-weight: bold;
+    letter-spacing: .8px;
+}
+.product .minitab .tabs div {
+    padding: 5px 10px;
+    background-color: #555555;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    opacity: .7;
+    transition: all .5s linear;
+    font-size: .8rem;
+    user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+}
+.product .minitab .tabs div:hover {
+    background-color: #203A43;
+    color: #00FFC6;
+}
+.product .minitab .tabs div:active {
+    opacity: .2;
+}
+.product .minitab .tabs div.active {
+    opacity: .9;
+    background-color: #203A43;
+    color: #00FFC6;
+}
+.product .productcon {
+    display: grid;
+    padding: 20px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.product .productCard {
+    box-sizing: border-box;
+    background-color: #203A43;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-items: center;
+    transition: all .2s ease-in-out;
+    width: 130px;
+    margin-bottom: 10px;
+}
+.product .productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 0 20px #0c0c0cd5;
+}
+.product .productCard img {
+    width: 100%;
+    height: 18vh;
+    box-sizing: border-box;
+}
+.product .productCard .detail {
+    padding: 3px 5px 5px 5px;
+}
+.product .productCard h3 {
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: .8px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    opacity: .9;
+}
+.product .productCard .price {
+    font-size: 11px;
+    opacity: .5;
+    letter-spacing: .6px;
+    color: #00FFC6;
+}
+.product .productCard button {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    background-color: #25D366;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    white-space: nowrap;
+}
+.product .productCard button:active {
+    opacity: .3;
+}
+.product .productCard button:hover {
+    opacity: .7;
+}
+.product .productCard i {
+    padding: 0 5px;
+}
+
+.contact {
+    padding: 30px;
+    justify-items: center;
+}
+.contact .formbox {
+    padding: 30px;
+    background-color: #203A43;
+    width: 50%;
+    box-sizing: border-box;
+}
+.contact .formbox h1 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+.contact .formbox input,textarea {
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    padding: 10px 15px;
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: 20vh;
+    border-radius: 15px;
+    text-transform: capitalize;
+    background-color: #ffffffa5;
+    letter-spacing: 1px;
+}
+.contact .formbox textarea {
+    height: 15vh;
+}
+.contact .formbox input::placeholder,textarea::placeholder {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.contact .formbox input[type = 'submit'] {
+    background: linear-gradient(0deg, #00ffc8df, #2c5364);
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: .8px;
+}
+.contact .formbox input[type = 'email'] {
+    text-transform: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .heading p {
+        font-size: 1.7rem;
+    }
+    .crumb .big {
+        font-size: 3rem;
+    }
+    .home .product-card {
+        flex: 1 0 30%;
+        max-width: 30%;
+    }
+    .product .productcon {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 980px) {
+    .product .productcon {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 830px) {
+    .product .productcon {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .product .productcon {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    header {
+    position: sticky;
+    top: 0;left: 0;
+    z-index: 1;
+    }
+    .home .product-card {
+        flex: 1 0 40%;
+        max-width: 40%;
+        min-width: 40%;
+    }
+    .home .banner {
+        height: 35vh;
+        width: 90%;
+    }
+    .home .banner p {
+        font-size: 1.3rem;
+    }
+    .home .banner #productlink {
+        font-size: 12px;
+    }
+    .home .banner br {
+        display: none;
+    }
+    .home .reasonbox {
+        padding:10px;
+    }
+    .home .reasonbox div {
+        width: 30%;
+    }
+    .home .reasonbox div img {
+        width: 25%;
+    }
+    .home .reasonbox div p {
+        font-size: .6rem;
+    }
+    .home .vibebox .vibes {
+        flex: 1 0 60%;
+        min-width: 50%;
+    }
+    .contact .formbox {
+        width: 70%;
+    }
+    .product .banner {
+        height: 20vh;
+    }
+}
+@media screen and (max-width: 570px) {
+    .heading p {
+        font-size: 1.2rem;
+    }
+    .crumb {
+        height: 50vh;
+    }
+    .crumb .big {
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+    .crumb .small {
+        font-size: 11px;
+    }
+    .home .vibebox .vibes {
+        align-items: unset;
+        height: 30vh;
+    }
+    .home .vibebox .vibes p {
+        font-size: 1rem;
+        line-height: 25px;
+    }
+    .home .reasonbox div {
+        width: 50%;
+    }
+    .home .product-card h3 {
+        font-size: 14px;
+    }
+    .home .product-card p {
+        font-size: 10px;
+    }
+    .home .product-card button {
+        font-size: 12px;
+    }
+    .contact .formbox {
+        width: 80%;
+    }
+    .product .productcon {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 435px) {
+    .product .productcon {
+        grid-template-columns: 1fr 1fr;
+    }
+    .product .minitab .tabs {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    .product .minitab .head {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    .product .productCard {
+        width: 150px;
+    }
+    .product .banner {
+        height: 15vh;
+        border-radius: 20px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .heading p {
+        font-size: 1rem;
+    }
+    .crumb .big {
+        font-size: 1.6rem;
+        padding: 10px 0;
+    }
+    .crumb .small {
+        font-size: 9px;
+    }
+    .home .banner {
+        height: 25vh;
+    }
+    .home .banner p {
+        font-size: .7rem;
+    }
+    .home .reasoncon .heading {
+        font-size: 1.2rem;
+    }
+    .home .reasonbox div {
+        width: 80%;
+    }
+    .home .discovercontainer  {
+        padding: 5px;
+    }
+    .home .cardbox {
+        padding: 5px;
+        gap: 10px;
+    }
+    .home .product-card {
+        flex: 1 0 46%;
+        max-width: 46%;
+        min-width: 46%;
+    }
+    .home .product-card h3 {
+        font-size: 12px;
+    }
+    .home .product-card p {
+        font-size: 8px;
+    }
+    .home .product-card button {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+    .home .product-img {
+        height: 170px;
+    }
+    .contact .formbox {
+        width: 100%;
+    }
+    .contact .formbox h1 {
+        font-size: 1.1rem;
+    }
+}
